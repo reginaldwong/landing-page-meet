@@ -15,7 +15,6 @@ const Header = styled.header`
   flex-direction: column;
 
 `
-
 const LogoImage = styled.img`
   width: 30%;
   display: flex;
@@ -43,6 +42,39 @@ const HeroSubtitle = styled.p`
   text-align: center;
   color: #87879D;
   width: 90%;
+  margin-bottom: 24px;
+`
+
+const DownloadButton = styled.button`
+  background-color: #4D96A9;
+  color: #FFF;
+  font-family: 'Red Hat Display', sans-serif;
+  font-weight: 900;
+  font-size: 16px;
+  line-height: 26px;
+  border-radius: 29px;
+  border: none;
+  width: 193px;
+  height: 58px;
+  margin-bottom: 24px;
+`
+
+const Version = styled.span`
+  color: #8FE3F9;
+`
+
+const Info = styled.button`
+  background-color: #855FB1;
+  color: #FFF;
+  font-family: 'Red Hat Display', sans-serif;
+  font-weight: 900;
+  font-size: 16px;
+  line-height: 26px;
+  border-radius: 29px;
+  border: none;
+  width: 139px;
+  height: 58px;
+  margin-bottom: 24px;
 `
 
 const App = () => {
@@ -58,6 +90,14 @@ const App = () => {
     <HeroSubtitle>
       Meet makes it easy to connect with others face-to-face virtually and collaborate across any device.
     </HeroSubtitle>
+    <DownloadButton type="button">Download <Version>v1.3</Version></DownloadButton>
+    <Info>What is it?</Info>
+
+
+
+
+
+
     </Container>
   );
 }
