@@ -13,6 +13,7 @@ const Container = styled.div`
   display: flex;
   flex-direction: column;
   align-items: center;
+  overflow-x: hidden;
 `
 
 const Header = styled.header`
@@ -28,7 +29,6 @@ const LogoImage = styled.img`
 
 const HeroImage = styled.img`
  width: calc(100vw + 40px);
- overflow: hidden;
  margin-bottom: 48px;
 `
 
@@ -47,7 +47,7 @@ const HeroSubtitle = styled.p`
   text-align: center;
   color: #87879D;
   width: 90%;
-  margin-bottom: 32px;
+  margin-bottom: 64px;
 `
 
 const DownloadButton = styled.button`
@@ -104,8 +104,29 @@ const CircleIndex = styled.span`
   justify-content: center;
 `
 
-const PhotoGallery = styled.div`
+const PhotoGalleryGrid = styled.div`
   display: grid;
+  width: 90%;
+  gap: 2rem;
+  grid-template-columns: repeat(auto-fit, minmax(151px, 1fr));
+  margin-bottom: 64px;
+`
+
+const GalleryImage = styled.img`
+  border-radius: 8px;
+  width: 151px;
+`
+
+const GallerySubtitle = styled.h2`
+  font-weight: 900;
+  font-size: 16px;
+  line-height: 26px;
+  color: #4D96A9;
+  letter-spacing: 4px;
+  text-transform: uppercase;
+  text-align: center;
+  width: 90%;
+  margin-bottom: 24px;
 `
 
 const App = () => {
@@ -115,20 +136,31 @@ const App = () => {
            <LogoImage src={Logo} alt="Meet logo"/>
            <HeroImage src={TabletHero} alt="Meet users"/>
       </Header>
-    <HeroSlogan>
-      Group Chat <br/>for Everyone
-    </HeroSlogan>
-    <HeroSubtitle>
-      Meet makes it easy to connect with others face-to-face virtually and collaborate across any device.
-    </HeroSubtitle>
-    <DownloadButton type="button">Download <Version>v1.3</Version></DownloadButton>
-    <Info>What is it?</Info>
-    <VertLine/>
-    <Circle><CircleIndex>01</CircleIndex></Circle>
-
-
-
-
+      <HeroSlogan>
+        Group Chat <br/>for Everyone
+      </HeroSlogan>
+      <HeroSubtitle>
+        Meet makes it easy to connect with others face-to-face virtually and collaborate across any device.
+      </HeroSubtitle>
+      <DownloadButton type="button">Download <Version>v1.3</Version></DownloadButton>
+      <Info>What is it?</Info>
+      <VertLine/>
+      <Circle><CircleIndex>01</CircleIndex></Circle>
+      <PhotoGalleryGrid>
+        <GalleryImage src={WomanVideoCall} alt="Woman videocalling"/>
+        <GalleryImage src={WomanVideoChat} alt="Women videochatting"/>
+        <GalleryImage src={MenMeeting} alt="Men in video call"/>
+        <GalleryImage src={ManTexting} alt="Man on phone"/>
+      </PhotoGalleryGrid>
+      <GallerySubtitle>
+        Built for Modern Use
+      </GallerySubtitle>
+      <HeroSubtitle>
+        Send messages, share files, show your screen, and record your meetings - all in one workspace. Control who can join
+        with invite-only team access, data encryption, and data export.
+      </HeroSubtitle>
+       <VertLine/>
+      <Circle><CircleIndex>02</CircleIndex></Circle>
 
     </Container>
   );
