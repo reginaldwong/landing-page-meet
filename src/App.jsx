@@ -1,7 +1,11 @@
 import './App.css';
 import styled from 'styled-components';
-import Logo from '../src/assets/logo.svg'
-import TabletHero from '../src/assets/tablet/image-hero.png'
+import Logo from '../src/assets/logo.svg';
+import TabletHero from './assets/tablet/image-hero.png';
+import WomanVideoCall from './assets/desktop/image-woman-in-videocall.jpg';
+import WomanVideoChat from './assets/desktop/image-women-videochatting.jpg';
+import MenMeeting from './assets/desktop/image-men-in-meeting.jpg';
+import ManTexting from './assets/desktop/image-man-texting.jpg';
 
 const Container = styled.div`
   height: 100vh;
@@ -10,11 +14,12 @@ const Container = styled.div`
   flex-direction: column;
   align-items: center;
 `
+
 const Header = styled.header`
   display: flex; 
   flex-direction: column;
-
 `
+
 const LogoImage = styled.img`
   width: 30%;
   display: flex;
@@ -42,7 +47,7 @@ const HeroSubtitle = styled.p`
   text-align: center;
   color: #87879D;
   width: 90%;
-  margin-bottom: 24px;
+  margin-bottom: 32px;
 `
 
 const DownloadButton = styled.button`
@@ -56,7 +61,7 @@ const DownloadButton = styled.button`
   border: none;
   width: 193px;
   height: 58px;
-  margin-bottom: 24px;
+  margin-bottom: 16px;
 `
 
 const Version = styled.span`
@@ -74,7 +79,33 @@ const Info = styled.button`
   border: none;
   width: 139px;
   height: 58px;
-  margin-bottom: 24px;
+  margin-bottom: 64px;
+`
+
+const VertLine = styled.div`
+  border-left: 1px solid #D8D8D8;
+  height: 84px;
+`
+
+const Circle = styled.div`
+  border-radius: 50%;
+  border: 1px solid #D8D8D8;
+  width: 56px;
+  height: 56px;
+  margin-bottom: 64px;
+`
+
+const CircleIndex = styled.span`
+  color: #87879D;
+  font-weight: 900;
+  font-size: 16px;
+  line-height: 56px;
+  display: flex;
+  justify-content: center;
+`
+
+const PhotoGallery = styled.div`
+  display: grid;
 `
 
 const App = () => {
@@ -92,7 +123,8 @@ const App = () => {
     </HeroSubtitle>
     <DownloadButton type="button">Download <Version>v1.3</Version></DownloadButton>
     <Info>What is it?</Info>
-
+    <VertLine/>
+    <Circle><CircleIndex>01</CircleIndex></Circle>
 
 
 
