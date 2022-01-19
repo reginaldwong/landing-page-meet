@@ -117,7 +117,7 @@ const CircleIndex = styled.span`
 const PhotoGalleryGrid = styled.div`
   display: grid;
   width: 90%;
-  gap: 2rem;
+  gap: 1.5rem;
   grid-template-columns: repeat(auto-fit, minmax(151px, 1fr));
   margin-bottom: 64px;
 `
@@ -151,10 +151,54 @@ const FeaturesTitle = styled.h2`
 
 const Footer = styled.footer`
   height: 428px;
-  background-image: url(${ImageFooter});
-  width: 100vw;
-  background-size: cover;
+  background: url(${ImageFooter});
   background-color: #4D96A9;
+  background-blend-mode: multiply;
+  background-size: cover;
+  margin-top: -28px;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+`
+
+const FooterTitle = styled.h2`
+  font-weight: 900;
+  font-size: 32px;
+  line-height: 36px;
+  text-align: center;
+  margin-top: 92px;
+  margin-bottom: 24px;
+  color: #fff;
+`
+
+const FooterSubtitle = styled.p`
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 26px;
+  text-align: center;
+  color: #fff;
+  margin-bottom: 32px;
+  width: 80%;
+`
+
+const FooterButton = styled.button`
+  background-color: #855FB1;
+  color: #FFF;
+  font-family: 'Red Hat Display', sans-serif;
+  font-weight: 900;
+  font-size: 16px;
+  line-height: 26px;
+  border-radius: 29px;
+  border: none;
+  width: 193px;
+  height: 58px;
+  margin-bottom: 72px;
+`
+
+const FooterVersion = styled.span`
+  color: #D9B8FF;
 `
 
 const App = () => {
@@ -191,9 +235,10 @@ const App = () => {
        <VertLine/>
       <CircleFooter><CircleIndex>02</CircleIndex></CircleFooter>
       <Footer>
-
+        <FooterTitle>Experience more together</FooterTitle>
+        <FooterSubtitle>Stay connected with reliable HD meetings and unlimited one-on-one and group video sessions.</FooterSubtitle>
+        <FooterButton type="button">Download <FooterVersion>v1.3</FooterVersion></FooterButton>
       </Footer>
-
     </Container>
   );
 }
