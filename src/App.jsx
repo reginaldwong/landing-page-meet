@@ -65,6 +65,11 @@ const DownloadButton = styled.button`
   width: 193px;
   height: 58px;
   margin-bottom: 16px;
+  cursor: pointer;
+
+  &:hover {
+    background-color: #71C0D4;
+  }
 `
 
 const Version = styled.span`
@@ -83,6 +88,11 @@ const Info = styled.button`
   width: 139px;
   height: 58px;
   margin-bottom: 64px;
+  cursor: pointer;
+  
+  &:hover {
+    background-color: #B18BDD;
+  }
 `
 
 const VertLine = styled.div`
@@ -195,6 +205,11 @@ const FooterButton = styled.button`
   width: 193px;
   height: 58px;
   margin-bottom: 72px;
+  cursor: pointer;
+
+  &:hover {
+    background-color: #B18BDD;
+  }
 `
 
 const FooterVersion = styled.span`
