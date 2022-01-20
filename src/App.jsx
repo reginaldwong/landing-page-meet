@@ -55,7 +55,7 @@ const HeroSubtitle = styled.p`
   margin-bottom: 64px;
 `
 
-const DownloadButton = styled.button`
+const Button = styled.button`
   background-color: #4D96A9;
   color: #FFF;
   font-family: 'Red Hat Display', sans-serif;
@@ -78,17 +78,10 @@ const Version = styled.span`
   color: #8FE3F9;
 `
 
-const Info = styled.button`
+const InfoButton = styled(Button)`
   background-color: #855FB1;
   color: #FFF;
-  font-family: 'Red Hat Display', sans-serif;
-  font-weight: 900;
-  font-size: 16px;
-  line-height: 26px;
-  border-radius: 29px;
-  border: none;
   width: 139px;
-  height: 58px;
   margin-bottom: 64px;
   cursor: pointer;
   
@@ -204,23 +197,9 @@ const FooterSubtitle = styled.p`
   width: 80%;
 `
 
-const FooterButton = styled.button`
-  background-color: #855FB1;
-  color: #FFF;
-  font-family: 'Red Hat Display', sans-serif;
-  font-weight: 900;
-  font-size: 16px;
-  line-height: 26px;
-  border-radius: 29px;
-  border: none;
+const FooterButton = styled(InfoButton)`
   width: 193px;
-  height: 58px;
   margin-bottom: 72px;
-  cursor: pointer;
-
-  &:hover {
-    background-color: #B18BDD;
-  }
 `
 
 const FooterVersion = styled.span`
@@ -240,8 +219,8 @@ const App = () => {
       <HeroSubtitle>
         Meet makes it easy to connect with others face-to-face virtually and collaborate across any device.
       </HeroSubtitle>
-      <DownloadButton type="button">Download <Version>v1.3</Version></DownloadButton>
-      <Info>What is it?</Info>
+      <Button type="button">Download <Version>v1.3</Version></Button>
+      <InfoButton>What is it?</InfoButton>
       <VertLine/>
       <Circle><CircleIndex>01</CircleIndex></Circle>
       <PhotoGalleryGrid>
