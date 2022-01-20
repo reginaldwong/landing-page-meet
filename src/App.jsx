@@ -28,14 +28,20 @@ const LogoImage = styled.img`
   width: 30%;
   display: flex;
   margin: 48px auto;
+  @media (min-width: 768px) {
+    width: 15%;
+  }
 `
 
 const HeroImage = styled.img`
  width: calc(100vw + 40px);
  margin-bottom: 48px;
+ @media (min-width: 768px) {
+    margin-bottom: 72px;
+  }
 `
 
-const HeroSlogan = styled.h1`
+const HeroTitle = styled.h1`
   font-weight: 900;
   font-size: 40px;
   line-height: 44px;
@@ -43,6 +49,11 @@ const HeroSlogan = styled.h1`
   margin-bottom: 24px;
   width: 75%;
   color: #28283D;
+  @media (min-width: 768px) {
+    font-size: 48px;
+    line-height: 48px;
+    width: 40%;
+  }
 `
 
 const HeroSubtitle = styled.p`
@@ -51,8 +62,12 @@ const HeroSubtitle = styled.p`
   line-height: 26px;
   text-align: center;
   color: #87879D;
-  width: 80%;
+  width: 90%;
   margin-bottom: 64px;
+  @media (min-width: 768px) {
+    width: 60%;
+    margin-bottom: 32px;
+  }
 `
 
 const Button = styled.button`
@@ -213,9 +228,7 @@ const App = () => {
            <LogoImage src={Logo} alt="Meet logo"/>
            <HeroImage src={TabletHero} alt="Meet users"/>
       </Header>
-      <HeroSlogan>
-        Group Chat for Everyone
-      </HeroSlogan>
+      <HeroTitle>Group Chat for Everyone</HeroTitle>
       <HeroSubtitle>
         Meet makes it easy to connect with others face-to-face virtually and collaborate across any device.
       </HeroSubtitle>
