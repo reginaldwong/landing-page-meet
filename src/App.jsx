@@ -17,6 +17,8 @@ const Container = styled.div`
   overflow-x: hidden;
 `
 
+// HEADER
+
 const Header = styled.header`
   display: flex; 
   flex-direction: column;
@@ -111,8 +113,11 @@ const Circle = styled.div`
 const CircleFooter = styled.div`
   border-radius: 50%;
   border: 1px solid #D8D8D8;
+  background-color: #fff;
   width: 56px;
   height: 56px;
+  position: relative;
+  z-index: 2;
 `
 
 const CircleIndex = styled.span`
@@ -123,6 +128,8 @@ const CircleIndex = styled.span`
   display: flex;
   justify-content: center;
 `
+
+// GRID
 
 const PhotoGalleryGrid = styled.div`
   display: grid;
@@ -159,6 +166,8 @@ const FeaturesTitle = styled.h2`
   margin-bottom: 32px;
 `
 
+// FOOTER
+
 const Footer = styled.footer`
   height: 428px;
   background: url(${ImageFooter});
@@ -171,6 +180,8 @@ const Footer = styled.footer`
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  position: relative;
+  z-index: 1;
 `
 
 const FooterTitle = styled.h2`
