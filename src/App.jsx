@@ -7,6 +7,9 @@ import WomanVideoChat from './assets/desktop/image-women-videochatting.jpg';
 import MenMeeting from './assets/desktop/image-men-in-meeting.jpg';
 import ManTexting from './assets/desktop/image-man-texting.jpg';
 import ImageFooter from './assets/mobile/image-footer.jpg';
+import ImageFooterTablet from './assets/tablet/image-footer.jpg';
+import HeroLeft from './assets/desktop/image-hero-left.png';
+import HeroRight from './assets/desktop/image-hero-right.png';
 
 const Container = styled.div`
   height: 100vh;
@@ -22,6 +25,14 @@ const Container = styled.div`
 const Header = styled.header`
   display: flex;
   flex-direction: column;
+  align-items: center;
+  @media (min-width: 1440px) {
+    display: flex;
+    flex-direction: row;
+  }
+  @media (min-width: 1440px) {
+    margin-bottom: 117px;
+  }
 `;
 
 const LogoImage = styled.img`
@@ -31,6 +42,11 @@ const LogoImage = styled.img`
   @media (min-width: 768px) {
     width: 15%;
   }
+  @media (min-width: 1440px) {
+    margin-top: 80px;
+    margin-bottom: 61px;
+    width: 8%;
+  }
 `;
 
 const HeroImage = styled.img`
@@ -39,6 +55,31 @@ const HeroImage = styled.img`
   @media (min-width: 768px) {
     margin-bottom: 72px;
   }
+  @media (min-width: 1440px) {
+    display: none;
+  }
+`;
+
+const HeroImageLeft = styled.img`
+  width: calc(37vw + 40px);
+  @media (max-width: 1439px) {
+    display: none;
+  }
+`;
+
+const HeroImageRight = styled.img`
+  width: calc(37vw + 40px);
+  margin-bottom: -50px;
+  @media (max-width: 1439px) {
+    display: none;
+  }
+`;
+
+const HeroContainer = styled.div`
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: -50px;
 `;
 
 const HeroTitle = styled.h1`
@@ -47,12 +88,17 @@ const HeroTitle = styled.h1`
   line-height: 44px;
   text-align: center;
   margin-bottom: 24px;
-  width: 75%;
+  width: 70%;
   color: #28283d;
   @media (min-width: 768px) {
     font-size: 48px;
     line-height: 48px;
     width: 40%;
+  }
+  @media (min-width: 1440px) {
+    width: 70%;
+    font-size: 64px;
+    line-height: 64px;
   }
 `;
 
@@ -62,11 +108,15 @@ const HeroSubtitle = styled.p`
   line-height: 26px;
   text-align: center;
   color: #87879d;
-  width: 90%;
+  width: 80%;
   margin-bottom: 32px;
   @media (min-width: 768px) {
     width: 60%;
     margin-bottom: 32px;
+  }
+  @media (min-width: 1440px) {
+    width: 85%;
+    font-size: 18px;
   }
 `;
 
@@ -78,6 +128,9 @@ const ButtonContainer = styled.div`
     flex-direction: row;
     align-items: center;
     margin-bottom: 80px;
+  }
+  @media (min-width: 1440px) {
+    margin-bottom: 0px;
   }
 `;
 
@@ -98,6 +151,9 @@ const Button = styled.button`
   &:hover {
     background-color: #71c0d4;
   }
+  @media (min-width: 1440px) {
+    margin-bottom: 0px;
+  }
 `;
 
 const Version = styled.span`
@@ -117,6 +173,9 @@ const InfoButton = styled(Button)`
 
   &:hover {
     background-color: #b18bdd;
+  }
+  @media (min-width: 1440px) {
+    margin-bottom: 0px;
   }
 `;
 
@@ -231,6 +290,12 @@ const Footer = styled.footer`
   align-items: center;
   position: relative;
   z-index: 1;
+  @media (min-width: 768px) {
+    background: url(${ImageFooterTablet});
+    background-color: #4d96a9;
+    background-blend-mode: multiply;
+    background-size: cover;
+  }
 `;
 
 const FooterTitle = styled.h2`
@@ -274,21 +339,27 @@ const FooterVersion = styled.span`
 const App = () => {
   return (
     <Container>
+      <LogoImage src={Logo} alt="Meet logo" />
+
       <Header>
-        <LogoImage src={Logo} alt="Meet logo" />
         <HeroImage src={TabletHero} alt="Meet users" />
+
+        <HeroImageLeft src={HeroLeft} />
+        <HeroContainer>
+          <HeroTitle>Group Chat for Everyone</HeroTitle>
+          <HeroSubtitle>
+            Meet makes it easy to connect with others face-to-face virtually and
+            collaborate across any device.
+          </HeroSubtitle>
+          <ButtonContainer>
+            <Button type="button">
+              Download <Version>v1.3</Version>
+            </Button>
+            <InfoButton>What is it?</InfoButton>
+          </ButtonContainer>
+        </HeroContainer>
+        <HeroImageRight src={HeroRight} />
       </Header>
-      <HeroTitle>Group Chat for Everyone</HeroTitle>
-      <HeroSubtitle>
-        Meet makes it easy to connect with others face-to-face virtually and
-        collaborate across any device.
-      </HeroSubtitle>
-      <ButtonContainer>
-        <Button type="button">
-          Download <Version>v1.3</Version>
-        </Button>
-        <InfoButton>What is it?</InfoButton>
-      </ButtonContainer>
       <VertLine />
       <Circle>
         <CircleIndex>01</CircleIndex>
