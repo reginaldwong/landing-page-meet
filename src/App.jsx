@@ -13,12 +13,15 @@ import HeroLeft from './assets/desktop/image-hero-left.png';
 import HeroRight from './assets/desktop/image-hero-right.png';
 
 const Container = styled.div`
-  height: 100vh;
+  height: 100%;
   background-color: #fff;
   display: flex;
   flex-direction: column;
   align-items: center;
   overflow-x: hidden;
+  @media (min-width: 1440px) {
+    margin: 0 auto;
+  }
 `;
 
 // HEADER
@@ -32,7 +35,7 @@ const Header = styled.header`
     flex-direction: row;
   }
   @media (min-width: 1440px) {
-    margin-bottom: 117px;
+    margin-bottom: 8.5rem;
   }
 `;
 
@@ -44,9 +47,9 @@ const LogoImage = styled.img`
     width: 15%;
   }
   @media (min-width: 1440px) {
-    margin-top: 80px;
+    margin-top: 3rem;
     margin-bottom: 61px;
-    width: 8%;
+    width: 8rem;
   }
 `;
 
@@ -66,6 +69,9 @@ const HeroImageLeft = styled.img`
   @media (max-width: 1439px) {
     display: none;
   }
+  @media (min-width: 1440px) {
+    width: 40rem;
+  }
 `;
 
 const HeroImageRight = styled.img`
@@ -74,6 +80,9 @@ const HeroImageRight = styled.img`
   @media (max-width: 1439px) {
     display: none;
   }
+  @media (min-width: 1440px) {
+    width: 40rem;
+  }
 `;
 
 const HeroContainer = styled.div`
@@ -81,6 +90,9 @@ const HeroContainer = styled.div`
   flex-direction: column;
   align-items: center;
   margin-bottom: -50px;
+  @media (min-width: 1440px) {
+    margin: 0 8.5rem;
+  }
 `;
 
 const HeroTitle = styled.h1`
@@ -97,7 +109,7 @@ const HeroTitle = styled.h1`
     width: 40%;
   }
   @media (min-width: 1440px) {
-    width: 70%;
+    width: 55%;
     font-size: 64px;
     line-height: 64px;
   }
@@ -116,8 +128,9 @@ const HeroSubtitle = styled.p`
     margin-bottom: 32px;
   }
   @media (min-width: 1440px) {
-    width: 85%;
+    width: 60%;
     font-size: 18px;
+    line-height: 32px;
   }
 `;
 
@@ -317,6 +330,8 @@ const Footer = styled.footer`
     background-blend-mode: multiply;
     background-size: cover;
     height: 308px;
+    flex-direction: row;
+    justify-content: space-evenly;
   }
 `;
 
@@ -334,6 +349,12 @@ const FooterTitle = styled.h2`
     width: 50%;
     margin-bottom: 32px;
   }
+  @media (min-width: 1440px) {
+    margin-top: 0px;
+    margin-bottom: 0px;
+    width: 20%;
+    text-align: left;
+  }
 `;
 
 const FooterSubtitle = styled.p`
@@ -347,11 +368,19 @@ const FooterSubtitle = styled.p`
   @media (min-width: 768px) {
     width: 75%;
   }
+  @media (min-width: 1440px) {
+    margin-bottom: 0px;
+    width: 15%;
+    text-align: left;
+  }
 `;
 
 const FooterButton = styled(InfoButton)`
   width: 193px;
   margin-bottom: 72px;
+  @media (min-width: 1440px) {
+    margin-bottom: 0px;
+  }
 `;
 
 const FooterVersion = styled.span`
