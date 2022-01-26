@@ -1,0 +1,22 @@
+{
+  "files": {
+    "main.css": "/landing-page-meet/static/css/main.52e6bf65.css",
+    "main.js": "/landing-page-meet/static/js/main.453cd9d9.js",
+    "static/media/image-hero.png": "/landing-page-meet/static/media/image-hero.3dbd9bf0eff94c50b694.png",
+    "static/media/image-hero-right.png": "/landing-page-meet/static/media/image-hero-right.95e30a4c336196db688f.png",
+    "static/media/image-hero-left.png": "/landing-page-meet/static/media/image-hero-left.40626e782bf59ca427b5.png",
+    "static/media/image-footer.jpg": "/landing-page-meet/static/media/image-footer.b047b7977a3a98b6fbca.jpg",
+    "static/media/image-men-in-meeting.jpg": "/landing-page-meet/static/media/image-men-in-meeting.19b0c4382d0d2c77de83.jpg",
+    "static/media/image-man-texting.jpg": "/landing-page-meet/static/media/image-man-texting.ce697f53d9703cae1980.jpg",
+    "static/media/image-woman-in-videocall.jpg": "/landing-page-meet/static/media/image-woman-in-videocall.346ccf01daac434d9814.jpg",
+    "static/media/image-women-videochatting.jpg": "/landing-page-meet/static/media/image-women-videochatting.bd9bcb9739c1fb0ad169.jpg",
+    "static/media/logo.svg": "/landing-page-meet/static/media/logo.8282cfa9c8badf295f20b64be4fe1310.svg",
+    "index.html": "/landing-page-meet/index.html",
+    "main.52e6bf65.css.map": "/landing-page-meet/static/css/main.52e6bf65.css.map",
+    "main.453cd9d9.js.map": "/landing-page-meet/static/js/main.453cd9d9.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.52e6bf65.css",
+    "static/js/main.453cd9d9.js"
+  ]
+}

@@ -1,0 +1,1 @@
+{"version":3,"file":"static/css/main.52e6bf65.css","mappings":"AAAA,iBAGE,qBACF,CAEA,gBAKE,QACF,CAEA,KACE,sCACF","sources":["App.css"],"sourcesContent":["*,\n*::before,\n*::after {\n  box-sizing: border-box;\n}\n\nbody,\nh1,\nh2,\nh3,\np {\n  margin: 0;\n}\n\nbody {\n  font-family: 'Red Hat Display', sans-serif;\n}\n"],"names":[],"sourceRoot":""}
