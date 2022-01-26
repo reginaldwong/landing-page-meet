@@ -19,9 +19,6 @@ const Container = styled.div`
   flex-direction: column;
   align-items: center;
   overflow-x: hidden;
-  /* @media (min-width: 1440px) {
-    margin: 0 auto;
-  } */
 `;
 
 // HEADER
@@ -303,6 +300,7 @@ const FeaturesSubtitle = styled(HeroSubtitle)`
     margin-bottom: 72px;
   }
 `;
+
 // FOOTER
 
 const Footer = styled.footer`
